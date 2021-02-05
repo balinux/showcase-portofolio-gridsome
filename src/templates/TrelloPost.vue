@@ -7,7 +7,7 @@
     <h3>Demo / Preview</h3>
     <ul>
       <li v-for="(attachment, index) in $page.post.attachments" :key="index">
-        <a :href="attachment" v-if="attachment !== '' ">{{ attachment }}</a>
+        <a :href="attachment" v-if="attachment !== ''">{{ attachment }}</a>
         <a :href="attachment" v-else class="visibledata">-</a>
 
         <!-- <p v-if="attachment !== '' ">aaa</p> -->
@@ -35,6 +35,12 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
+      meta: [
+        {
+          name: "description",
+          content: this.$page.post.title + ' | PortFolio | Rio Juniyantara Putra',
+        },
+      ],
     };
   },
 };
@@ -42,7 +48,7 @@ export default {
 
 <style lang="scss">
 .visibledata {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 </style>
