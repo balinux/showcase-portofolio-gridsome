@@ -5,10 +5,16 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Show Case / Portfolio | Rio Juniyantara Putra',
   templates: {
     Portfolio: '/project/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    TrelloPost: [
+      {
+        path: '/trello/:id',
+        component: './src/templates/TrelloPost.vue'
+      }
+    ]
   },
   plugins: [
     {
