@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <div class="work-cards">
+      <WorkCardTrello v-for="edge in $page.trellopost.edges" :key="edge.node.id" :work="edge.node" />
       <WorkCard v-for="edge in $page.portfolio.edges" :key="edge.node.id" :work="edge.node" />
     </div>
   </Layout>
@@ -24,15 +25,33 @@ query{
       }
     }
   }
+
+  trellopost: allTrelloPost{
+    edges{
+      node{
+        title,
+        path,
+        id,
+        image,
+        labels,
+        attachments,
+        date
+      }
+    }
+  }
+
 }
 
 </page-query>
 
 <script>
 import WorkCard from '~/components/WorkCard.vue';
+import WorkCardTrello from '~/components/WorkCardTrello.vue'
+
 export default {
   components: {
-    WorkCard
+    WorkCard,
+    WorkCardTrello
   },
   metaInfo: {
     title: 'My Works'
