@@ -3,10 +3,21 @@
     <div class="about">
       <div class="about-text">
         <h1>About Me</h1>
-        <p>They don’t want us to eat. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast. Mogul talk. They will try to close the door on you, just open it. You smart, you loyal, you a genius. Special cloth alert. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. Another one. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.</p>
+        <p>
+          Halo saya Rio, saya seorang mobile developer (Flutter and React Native) di salah satu
+          universitas besar di bali, dan seorang web
+          developer menggunakan Laravel, vuejs, nodejs, react. Memiliki
+          ketertarikan untuk menjadi full-stack developer dikarnakan dulu juga
+          pernah bekerja di salah satu mitra Indosat untuk mengerjakan semua hal
+          yang terkait tentang Jaringan kemputer, router, switch dan server.
+        </p>
       </div>
       <div class="about-photo">
-        <g-image src="~/assets/images/person.jpg" width="300" />
+        <g-image
+          src="~/assets/images/profile-rio-juniyantara-putra.jpg"
+          class="image-cover"
+          width="300"
+        />
       </div>
     </div>
   </Layout>
@@ -15,8 +26,8 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About Me'
-  }
+    title: "About Me",
+  },
 };
 </script>
 
@@ -24,6 +35,17 @@ export default {
 .about {
   &-text {
     text-align: left;
+  }
+}
+.image-cover {
+  border-radius: 5px;
+  margin-top: 10%;
+  &:hover {
+    margin-top: 0%;
+    -webkit-transition: all 0.5s 0s ease-in-out;
+    -moz-transition: all 0.5s 0s ease-in-out;
+    -o-transition: all 0.5s 0s ease-in-out;
+    transition: all 0.5s 0s ease-in-out;
   }
 }
 @media screen and (min-width: 768px) {
