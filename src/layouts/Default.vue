@@ -18,16 +18,18 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="footer__content">
         <p>
           Built with 🍻 by
           <a target="_blank" href="//edmundekott.me">Edmund Ekott</a>
         </p>
         <p>
+          Custom with 💖 by
+          <a target="_blank" href="//yhotie.com">Rio Juniyantara Putra</a>
+        </p>
+        <p>
           Powered by
           <a target="_blank" href="//gridsome.org">Gridsome</a>
         </p>
-      </div>
     </footer>
   </div>
 </template>
@@ -101,7 +103,7 @@ export default {
   height: 200px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
 
   p {
@@ -111,9 +113,16 @@ export default {
     }
   }
 }
+
+@media (max-width: 575.98px) { 
+    .footer {
+        flex-direction: column;
+    }
+ }
 @media screen and (max-width: 650px) {
   .header {
     height: 65px;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 760px) {
