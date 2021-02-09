@@ -3,7 +3,7 @@
     <!-- :style="{backgroundImage: `url(${work.cover_image})`}" -->
     <div class="work-card-details-container">
       <div class="work-card-header">
-        <g-image alt="Cover Image" class="work-image" fit="contain" width="500px" :src="work.image" />
+        <g-image alt="Cover Image" class="work-image" fit="contain" width="500px" :src="work.thumbnail" />
       </div>
       <div class="work-card-details">
         <h4 class="work-card-title" v-html="work.title"></h4>

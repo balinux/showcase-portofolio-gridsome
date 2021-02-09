@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Show Case / Portfolio | Rio Juniyantara Putra',
+  siteName: 'Portfolio | Rio Juniyantara Putra',
   templates: {
     Portfolio: '/project/:title',
     Tag: '/tag/:id',

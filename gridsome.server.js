@@ -17,6 +17,7 @@
 
 const axios = require('axios')
 
+
 module.exports = function (api) {
   api.loadSource(async actions => {
     const { data } = await axios.get('https://trello.com/b/fgnRYaKZ/blog-trello.json')
@@ -32,6 +33,7 @@ module.exports = function (api) {
         id: item.id,
         title: item.name,
         content: item.desc,
+        thumbnail: item.cover.scaled.length != 0 ? item.cover.scaled[2].url : '',
         image: item.attachments.length != 0 ? item.attachments[0].url : '',
         labels: item.labels.map(label => label.name),
         attachments: item.attachments.map(attachment => {

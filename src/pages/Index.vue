@@ -32,7 +32,7 @@ query{
         title,
         path,
         id,
-        image,
+        thumbnail,
         labels,
         attachments,
         date
